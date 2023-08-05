@@ -1,0 +1,23 @@
+package com.markerhub.common.dto;
+
+import lombok.Data;
+
+
+
+import javax.validation.constraints.NotBlank;
+
+import java.io.Serializable;
+@Data
+public class LoginDto implements Serializable {
+    /**
+     * @NotEmpty作用在集合上
+     * @NotNull作用在基本类型上
+     * @NotBlank作用在String上
+     *
+     */
+    @NotBlank(message = "昵称不能为空")
+    private String username;
+
+    @NotBlank(message = "密码不能为空")
+    private String password;
+}
